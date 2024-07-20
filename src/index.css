@@ -156,3 +156,7 @@ select {
 .animate {
   animation: scroll 15s linear infinite;
 }
+
+.PhoneInputInput{
+  background-color: #F6F6F6;
+}

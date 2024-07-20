@@ -1,6 +1,8 @@
 import { Eye, EyeOff } from "lucide-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
 
 export default function RegisterAccount() {
   const [showPassowrd, setShowPassowrd] = useState(false);
@@ -63,13 +65,12 @@ export default function RegisterAccount() {
             Phone
           </label>
           <div className="flex items-center gap-2 rounded bg-[#F6F6F6]  w-full px-2 focus:border-[#2E2E2E]   h-10 text-[#696969]">
-            <div>
-              <img src="/icons/mail.svg" alt="" />
-            </div>
-            <input
-              autoComplete="off"
-              type="text"
-              className="h-full w-full bg-transparent"
+            <PhoneInput
+              defaultCountry="IN"
+              placeholder="Enter phone number"
+              value={value}
+              onChange={setValue}
+              className="h-full w-full bg-[#F6F6F6]"
             />
           </div>
         </div>
