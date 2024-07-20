@@ -1,18 +1,8 @@
-import { useState } from "react";
-import "./App.css";
-import Login from "./components/authentication/Login";
-import LoginPage from "./pages/LoginPage";
+import { RouterProvider } from "react-router-dom";
+import appRouter from "./routes";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const hello = "hello";
-
-  return (
-    <div>
-      <LoginPage />
-    </div>
-  );
+  return <RouterProvider router={appRouter} />;
 }
 
 export default App;
