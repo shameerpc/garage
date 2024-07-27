@@ -6,6 +6,8 @@ export default {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light"],
+    base: false,
+    darkTheme: "light",
+    // themes: ["light"],
   },
 };

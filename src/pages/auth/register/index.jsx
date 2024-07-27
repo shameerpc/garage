@@ -6,7 +6,8 @@ import PhoneInput from "react-phone-number-input";
 
 export default function RegisterAccount() {
   const [showPassowrd, setShowPassowrd] = useState(false);
-
+  const [selected, setSelected] = useState("");
+  const [value, setValue] = useState();
   return (
     <div className=" w-full flex justify-center h-screen md:py-4 py-2">
       <div className=" max-w-md w-full flex flex-col md:gap-y-3 gap-y-1.5">
@@ -72,6 +73,11 @@ export default function RegisterAccount() {
               onChange={setValue}
               className="h-full w-full bg-[#F6F6F6]"
             />
+            {/* <input
+              autoComplete="off"
+              type="text"
+              className="h-full w-full bg-transparent"
+            /> */}
           </div>
         </div>
         <div className="flex group flex-col space-y-2">
@@ -102,7 +108,7 @@ export default function RegisterAccount() {
         </div>
         <div className="mt-4 w-full">
           <button className="my-2 w-full bg-[#FFCD57] text-black h-12 font-semibold rounded">
-            CREATE ACCOUNT
+            <Link to="/customer">CREATE ACCOUNT</Link>
           </button>
 
           <p className="text-center  mt-1.5">
